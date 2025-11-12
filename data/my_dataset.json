@@ -1,0 +1,26 @@
+{ "MI": "$sp = frame-setup SUBXri $sp, 16, 0", "MCInst": "	sub	sp, sp, #16" }
+{ "MI": "STRWui $wzr, $sp, 3 :: (store (s32) into %ir.retval)", "MCInst": "	str	wzr, [sp, #12]" }
+{ "MI": "renamable $w8 = MOVZWi 1, 0", "MCInst": "	mov	w8, #1" }
+{ "MI": "STRWui killed renamable $w8, $sp, 2 :: (store (s32) into %ir.a)", "MCInst": "	str	w8, [sp, #8]" }
+{ "MI": "renamable $w8 = MOVZWi 2, 0", "MCInst": "	mov	w8, #2" }
+{ "MI": "STRWui killed renamable $w8, $sp, 1 :: (store (s32) into %ir.b)", "MCInst": "	str	w8, [sp, #4]" }
+{ "MI": "renamable $w8 = LDRWui $sp, 2 :: (dereferenceable load (s32) from %ir.a)", "MCInst": "	ldr	w8, [sp, #8]" }
+{ "MI": "renamable $w9 = LDRWui $sp, 1 :: (dereferenceable load (s32) from %ir.b)", "MCInst": "	ldr	w9, [sp, #4]" }
+{ "MI": "$w8 = ADDWrs killed renamable $w8, killed renamable $w9, 0", "MCInst": "	add	w8, w8, w9" }
+{ "MI": "STRWui killed renamable $w8, $sp, 0 :: (store (s32) into %ir.c)", "MCInst": "	str	w8, [sp]" }
+{ "MI": "renamable $w0 = LDRWui $sp, 0 :: (dereferenceable load (s32) from %ir.c)", "MCInst": "	ldr	w0, [sp]" }
+{ "MI": "$sp = frame-destroy ADDXri $sp, 16, 0", "MCInst": "	add	sp, sp, #16" }
+{ "MI": "RET undef $lr, implicit killed $w0", "MCInst": "	ret" }
+{ "MI": "$sp = frame-setup SUBXri $sp, 16, 0", "MCInst": "	sub	sp, sp, #16" }
+{ "MI": "STRWui $wzr, $sp, 3 :: (store (s32) into %ir.retval)", "MCInst": "	str	wzr, [sp, #12]" }
+{ "MI": "renamable $w8 = MOVZWi 1, 0", "MCInst": "	mov	w8, #1" }
+{ "MI": "STRWui killed renamable $w8, $sp, 2 :: (store (s32) into %ir.a)", "MCInst": "	str	w8, [sp, #8]" }
+{ "MI": "renamable $w8 = MOVZWi 2, 0", "MCInst": "	mov	w8, #2" }
+{ "MI": "STRWui killed renamable $w8, $sp, 1 :: (store (s32) into %ir.b)", "MCInst": "	str	w8, [sp, #4]" }
+{ "MI": "renamable $w8 = LDRWui $sp, 2 :: (dereferenceable load (s32) from %ir.a)", "MCInst": "	ldr	w8, [sp, #8]" }
+{ "MI": "renamable $w9 = LDRWui $sp, 1 :: (dereferenceable load (s32) from %ir.b)", "MCInst": "	ldr	w9, [sp, #4]" }
+{ "MI": "$w8 = ADDWrs killed renamable $w8, killed renamable $w9, 0", "MCInst": "	add	w8, w8, w9" }
+{ "MI": "STRWui killed renamable $w8, $sp, 0 :: (store (s32) into %ir.c)", "MCInst": "	str	w8, [sp]" }
+{ "MI": "renamable $w0 = LDRWui $sp, 0 :: (dereferenceable load (s32) from %ir.c)", "MCInst": "	ldr	w0, [sp]" }
+{ "MI": "$sp = frame-destroy ADDXri $sp, 16, 0", "MCInst": "	add	sp, sp, #16" }
+{ "MI": "RET undef $lr, implicit killed $w0", "MCInst": "	ret" }

@@ -1,0 +1,13 @@
+{"arch": "aarch64", "mc_text": "sub sp, sp, #16", "mi_text": "$sp = frame-setup SUBXri $sp, 16, 0"}
+{"arch": "aarch64", "mc_text": "str wzr, [sp, #12]", "mi_text": "STRWui $wzr, $sp, 3"}
+{"arch": "aarch64", "mc_text": "mov w8, #1", "mi_text": "renamable $w8 = MOVZWi 1, 0"}
+{"arch": "aarch64", "mc_text": "str w8, [sp, #8]", "mi_text": "STRWui killed renamable $w8, $sp, 2"}
+{"arch": "aarch64", "mc_text": "mov w8, #2", "mi_text": "renamable $w8 = MOVZWi 2, 0"}
+{"arch": "aarch64", "mc_text": "str w8, [sp, #4]", "mi_text": "STRWui killed renamable $w8, $sp, 1"}
+{"arch": "aarch64", "mc_text": "ldr w8, [sp, #8]", "mi_text": "renamable $w8 = LDRWui $sp, 2"}
+{"arch": "aarch64", "mc_text": "ldr w9, [sp, #4]", "mi_text": "renamable $w9 = LDRWui $sp, 1"}
+{"arch": "aarch64", "mc_text": "add w8, w8, w9", "mi_text": "$w8 = ADDWrs killed renamable $w8, killed renamable $w9, 0"}
+{"arch": "aarch64", "mc_text": "str w8, [sp]", "mi_text": "STRWui killed renamable $w8, $sp, 0"}
+{"arch": "aarch64", "mc_text": "ldr w0, [sp]", "mi_text": "renamable $w0 = LDRWui $sp, 0"}
+{"arch": "aarch64", "mc_text": "add sp, sp, #16", "mi_text": "$sp = frame-destroy ADDXri $sp, 16, 0"}
+{"arch": "aarch64", "mc_text": "ret", "mi_text": "RET undef $lr, implicit killed $w0"}
